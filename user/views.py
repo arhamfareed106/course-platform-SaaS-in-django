@@ -10,3 +10,4 @@ def register(request):
         form = CustomUserCreationForm()
         
     return render(request, "registration/register.html", {"form": form})  # Added missing comma
+    
