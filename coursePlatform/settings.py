@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'course',
     'coursePlatform',
     'payment',  
-    # 'coreheaders',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
