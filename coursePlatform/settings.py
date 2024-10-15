@@ -85,9 +85,10 @@ WSGI_APPLICATION = 'coursePlatform.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",  # Uses a file named db.sqlite3 in your project directory
     }
 }
+
 
 
 # Password validation
