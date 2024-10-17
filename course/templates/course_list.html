@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+<h2>Courses</h2>
+
+{% for course in courses %}
+
+<h3><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></h3>   
+
+{% endfor %}
+
