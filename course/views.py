@@ -11,18 +11,17 @@ from .models import Course
 @login_required
 def course_list(request):
     courses = Course.objects.all()
-    if user.is_authenticated:
+    if request.user.is_authenticated:
         for course in courses:
             course.is_unlocked = request.user in course.subscribers.all()
     else:
         for course in courses:
             course.is_unlocked = False 
 
-    context= {
+    context = {
         "courses": courses
     }
-    return render(request,"course_list.html", context)
-
+    return render(request, "course_list.html", context)
 @login_required
 def course_detail(request, course_id):
     course = get_object_or_404(Course, id=course_id)
