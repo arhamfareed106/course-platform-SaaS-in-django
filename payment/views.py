@@ -65,7 +65,6 @@ def handle_checkout_session(session):
     course_id = session["metadata"]["course_id"]
     user_id = session["metadata"]["user_id"]
     user = User.objects.get(id=user_id)
-    
 
     course = get_object_or_404(Course, pk=course_id)
     course.subscribers.add(user)
@@ -77,4 +76,3 @@ def course_success(request):
 @login_required
 def course_cancel(request):
     return redirect("course_list")
-
