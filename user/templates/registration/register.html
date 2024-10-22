@@ -1,14 +1,76 @@
-{% extends 'base.html' %} {% block content %}
-<div class="row justify-content-center">
-  <div class="col-md-6">
-    <h2>Register</h2>
-    <form method="post">
-      {% csrf_token %} {{form.as_p}}
-      <button type="submit" class="btn btn-primary">Register</button>
-    </form>
-    <div class="mt-3">
-        <p>Already have an account? <a href="{% url 'login' %}">Login</p>
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Dark theme styling */
+        body {
+            background-color: #1f2937; /* Dark gray background */
+            color: #e5e7eb; /* Light gray text */
+        }
+
+        .card {
+            background-color: #374151; /* Darker background for the card */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #3b82f6; /* Light blue for links */
+        }
+
+        a:hover {
+            color: #60a5fa;
+        }
+
+        .btn-primary {
+            background-color: #3b82f6;
+            border-color: #3b82f6;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+
+        /* Animation for form appearance */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row justify-content-center fade-in">
+      <div class="col-md-6 card">
+        <h2 class="text-center mb-4">Register</h2>
+        <form method="post">
+          {% csrf_token %} 
+          {{form.as_p}}
+          <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+        <div class="mt-3 text-center">
+          <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+</body>
+</html>
 {% endblock %}
