@@ -31,3 +31,7 @@ def course_detail(request, course_id):
         "course": course
     }
     return render(request,"course_detail.html", context)
+
+
+def home(request):
+    return render(request, 'course/home.html')  # Make sure this points to your template

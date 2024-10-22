@@ -77,3 +77,4 @@ def course_success(request):
 @login_required
 def course_cancel(request):
     return redirect("course_list")
+

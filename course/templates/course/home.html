@@ -1,0 +1,55 @@
+<!-- courses/templates/courses/home.html -->
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Platform - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <a href="/" class="text-gray-700 text-xl font-bold">CoursePlatform</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="/course" class="hover:bg-gray-200 text-gray-700 px-3 py-2 rounded">Courses</a>
+                        <a href="#" class="hover:bg-gray-200 text-gray-700 px-3 py-2 rounded">Instructors</a>
+                        <a href="#" class="hover:bg-gray-200 text-gray-700 px-3 py-2 rounded">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gray-200 text-center py-12">
+        <h1 class="text-5xl font-bold text-gray-800">Welcome to CoursePlatform</h1>
+        <p class="text-gray-600 mt-4">Join thousands of students improving their skills through our platform.</p>
+        <a href="/course" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Explore Courses</a>
+    </header>
+
+    <!-- Featured Courses -->
+    <main class="max-w-7xl mx-auto mt-12 px-4">
+        <h2 class="text-3xl font-bold mb-6">Top Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Example Course Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/400" alt="Course Image" class="w-full h-48 object-cover rounded">
+                <h3 class="mt-4 text-xl font-semibold">Python for Beginners</h3>
+                <p class="text-gray-600">An introductory course to learn Python programming language.</p>
+                <a href="#" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Enroll Now</a>
+            </div>
+            <!-- Add more course cards as needed -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <p>&copy; 2024 CoursePlatform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
